@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Message": {
+    "dataSource": null
+  },
+  "Country": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "City": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "User": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "InputType": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "ItemType": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "Requirement": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "HomeScreen":{
+    "dataSource": "db",
+    "public": true
+  }
+}

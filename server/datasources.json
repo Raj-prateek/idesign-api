@@ -1,0 +1,15 @@
+{
+  "db":{
+  	"name": "db",
+    "connector": "memory"
+  },
+  "MYServer": {
+    "name": "MYServer",
+    "connector": "mysql",
+    "host":"127.0.0.1",
+    "database": "clothes",
+    "port":3306,
+    "password":"root",
+    "username":"root"
+  }
+}
