@@ -32,10 +32,10 @@
   "properties": {
     "id": {
       "type": "Number",
-      "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
+      "generated": true,
       "id": 1,
       "mysql": {
         "columnName": "id",

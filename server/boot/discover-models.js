@@ -10,7 +10,7 @@ const mkdirp = promisify(require('mkdirp'));
 const DATASOURCE_NAME = 'MYServer';
 const dataSourceConfig = require('../datasources.json');
 const db = new loopback.DataSource(dataSourceConfig[DATASOURCE_NAME]);
-const tables=["country","city","user","item_type","input_type","requirement"];
+const tables=[/*"country","city","user","item_type","input_type","requirement"*/ 'order'];
 
 async function discover() {
   for(table in tables){

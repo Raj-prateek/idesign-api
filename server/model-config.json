@@ -44,8 +44,16 @@
     "dataSource": "MYServer",
     "public": true
   },
-  "HomeScreen":{
+  "HomeScreen": {
     "dataSource": "db",
+    "public": true
+  },
+  "Locality": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "Order": {
+    "dataSource": "MYServer",
     "public": true
   }
 }
