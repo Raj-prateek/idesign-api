@@ -1,36 +1,26 @@
 {
-  "name": "Locality",
+  "name": "ItemType",
   "options": {
     "idInjection": false,
     "mysql": {
       "schema": "clothes",
-      "table": "locality"
+      "table": "item_type"
     },
     "relations": {
-      "fkLocalityCityrel": {
-        "model": "City",
+      "fkCategoryrel": {
+        "model": "Category",
         "type": "belongsTo",
-        "foreignKey": "city"
-      },
-      "fkLocalityCountryrel": {
-        "model": "Country",
-        "type": "belongsTo",
-        "foreignKey": "country"
-      },
-      "fkLocalityUserrel": {
-        "model": "User",
-        "type": "belongsTo",
-        "foreignKey": "createdby"
+        "foreignKey": "category"
       }
     }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
-      "generated": true,
       "id": 1,
       "mysql": {
         "columnName": "id",
@@ -41,14 +31,14 @@
         "nullable": "N"
       }
     },
-    "address": {
+    "name": {
       "type": "String",
       "required": false,
       "length": 100,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "address",
+        "columnName": "name",
         "dataType": "varchar",
         "dataLength": 100,
         "dataPrecision": null,
@@ -56,14 +46,14 @@
         "nullable": "Y"
       }
     },
-    "city": {
+    "pricePerStiching": {
       "type": "Number",
       "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "city",
+        "columnName": "price_per_stiching",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -71,78 +61,33 @@
         "nullable": "Y"
       }
     },
-    "country": {
-      "type": "String",
+    "pricePerAlteration": {
+      "type": "Number",
       "required": false,
-      "length": 3,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "country",
-        "dataType": "char",
-        "dataLength": 3,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "price_per_alteration",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "Y"
       }
     },
-    "block": {
-      "type": "String",
+    "published": {
+      "type": "Number",
       "required": false,
-      "length": 10,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
       "mysql": {
-        "columnName": "block",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "houseno": {
-      "type": "String",
-      "required": false,
-      "length": 10,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "houseNo",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "landmark": {
-      "type": "String",
-      "required": false,
-      "length": 100,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "landmark",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "pincode": {
-      "type": "String",
-      "required": false,
-      "length": 10,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "pincode",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "published",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
         "nullable": "Y"
       }
     },
@@ -176,64 +121,76 @@
         "nullable": "Y"
       }
     },
-    "lat": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 6,
-      "mysql": {
-        "columnName": "lat",
-        "dataType": "decimal",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 6,
-        "nullable": "Y"
-      }
-    },
-    "lng": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 6,
-      "mysql": {
-        "columnName": "lng",
-        "dataType": "decimal",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 6,
-        "nullable": "Y"
-      }
-    },
-    "published": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 3,
-      "scale": 0,
-      "mysql": {
-        "columnName": "published",
-        "dataType": "tinyint",
-        "dataLength": null,
-        "dataPrecision": 3,
-        "dataScale": 0,
-        "nullable": "Y"
-      }
-    },
-    "createdby": {
+    "itemType": {
       "type": "Number",
       "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "createdby",
+        "columnName": "item_type",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
         "dataScale": 0,
         "nullable": "Y"
+      }
+    },
+    "addon": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "addon",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "addonPrice": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "addon_price",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "category": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "category",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    }
+  },
+  "methods": {
+    "get": {
+      "accepts": [],
+      "returns": {
+        "arg": "data",
+        "type": "object"
+      },
+      "http": {
+        "verb": "get"
       }
     }
   }

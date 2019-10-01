@@ -1,17 +1,17 @@
 {
-  "name": "User",
+  "name": "Category",
   "options": {
     "idInjection": false,
     "mysql": {
       "schema": "clothes",
-      "table": "user"
+      "table": "category"
     },
     "relations": {}
   },
   "properties": {
     "id": {
       "type": "Number",
-      "generated": true,
+      "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
@@ -28,87 +28,26 @@
     "name": {
       "type": "String",
       "required": false,
-      "length": 60,
+      "length": 100,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "name",
         "dataType": "varchar",
-        "dataLength": 60,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "email": {
-      "type": "String",
-      "required": true,
-      "length": 100,
-      "precision": null,
-      "scale": null,
-      "id": 2,
-      "mysql": {
-        "columnName": "email",
-        "dataType": "varchar",
         "dataLength": 100,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
-      }
-    },
-    "password": {
-      "type": "String",
-      "required": false,
-      "length": 10,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "password",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
         "nullable": "Y"
       }
     },
-    "phoneNumber": {
-      "type": "String",
-      "required": false,
-      "length": 10,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "phone_number",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
-    "verified": {
+    "published": {
       "type": "Number",
       "required": false,
       "length": null,
       "precision": 3,
       "scale": 0,
       "mysql": {
-        "columnName": "verified",
-        "dataType": "tinyint",
-        "dataLength": null,
-        "dataPrecision": 3,
-        "dataScale": 0,
-        "nullable": "Y"
-      }
-    },
-    "spam": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 3,
-      "scale": 0,
-      "mysql": {
-        "columnName": "spam",
+        "columnName": "published",
         "dataType": "tinyint",
         "dataLength": null,
         "dataPrecision": 3,

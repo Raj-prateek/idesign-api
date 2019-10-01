@@ -17,7 +17,7 @@
     "dataSource": "db",
     "public": false
   },
-  "Message": {
+  "SendMail": {
     "dataSource": null
   },
   "Country": {
@@ -32,11 +32,11 @@
     "dataSource": "MYServer",
     "public": true
   },
-  "InputType": {
+  "ItemType": {
     "dataSource": "MYServer",
     "public": true
   },
-  "ItemType": {
+  "InputType": {
     "dataSource": "MYServer",
     "public": true
   },
@@ -44,16 +44,20 @@
     "dataSource": "MYServer",
     "public": true
   },
-  "HomeScreen": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Locality": {
-    "dataSource": "MYServer",
-    "public": true
-  },
   "Order": {
     "dataSource": "MYServer",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "Locality":{
+    "dataSource": "MYServer",
+    "public": true
+  },
+  "Email":{
+    "dataSource": "myEmailDataSource",
     "public": true
   }
 }

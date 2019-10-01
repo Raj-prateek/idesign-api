@@ -36,6 +36,7 @@
       "precision": 10,
       "scale": 0,
       "generated": true,
+      
       "id": 1,
       "mysql": {
         "columnName": "id",
@@ -237,6 +238,36 @@
         "dataType": "timestamp",
         "dataLength": null,
         "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "count": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "count",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 6,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "totalPrice": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "totalPrice",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
         "dataScale": null,
         "nullable": "Y"
       }
