@@ -3,10 +3,16 @@
   "options": {
     "idInjection": false,
     "mysql": {
-      "schema": "clothes",
+      "schema": "idf",
       "table": "item_type"
     },
-    "relations": {}
+    "relations": {
+      "fkCategoryrel": {
+        "model": "Category",
+        "type": "belongsTo",
+        "foreignKey": "category"
+      }
+    }
   },
   "properties": {
     "id": {
