@@ -59,13 +59,13 @@
     "password": {
       "type": "String",
       "required": false,
-      "length": 10,
+      "length": 200,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "password",
         "dataType": "varchar",
-        "dataLength": 10,
+        "dataLength": 200,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
